@@ -1,0 +1,243 @@
+:root {
+  --jaune: #eef13f;
+  --vert: #80b238;
+  --bleu: #80c1d6;
+  --orange: hsl(13, 99%, 60%);
+}
+
+* {
+  box-sizing: border-box;
+  text-align: center;
+}
+
+body {
+  width: 100%;
+  font-family: Atma, sans-serif;
+  background: var(--bleu);
+  text-align: center;
+  color: white;
+}
+nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: hsl(85, 53%, 45%, 80%);
+  z-index: 100;
+  padding: 0.2rem;
+}
+
+ul {
+  list-style: none;
+  text-decoration: none;
+  display: flex;
+  justify-content: space-around;
+  text-transform: uppercase;
+}
+
+li {
+  transition: 1s;
+}
+
+nav li:hover:nth-child(odd) {
+  transform: rotate(5deg) scale(1.5);
+}
+
+nav li:hover:nth-child(even) {
+  transform: rotate(-5deg) scale(1.5);
+}
+
+nav li:last-of-type {
+  font-weight: bold;
+}
+
+ul a {
+  text-decoration: none;
+  color: white;
+}
+
+header {
+  background-image: url(images/blue-splash.png);
+  
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  padding-bottom: 50px;
+}
+
+header img {
+  display: inline-block;
+  height: 38rem;
+  width: 38rem;
+  margin: 6rem auto;
+}
+
+header h1  {
+  font-family: "Bangers";
+  font-size: 80px;
+  color: var(--orange);
+  text-shadow: 2px 2px white;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+main {
+  margin-bottom: 5rem;
+}
+
+form {
+  display: grid;
+  font-size: 1.5rem;
+}
+input {
+  display: block;
+  font: inherit;
+  width: 100%;
+  padding: 1rem;
+  background: var(--orange);
+  border: none;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+input:focus {
+  background: var(--yellow);
+  color: var(--orange);
+}
+
+input::-webkit-input-placeholder {
+  color: #fff;
+}
+
+input:-ms-input-placeholder {
+  color: #fff;
+}
+
+input::-ms-input-placeholder {
+  color: #fff;
+}
+
+input::placeholder {
+  color: #fff;
+}
+
+input:focus::-webkit-input-placeholder {
+  color: var(--orange);
+}
+
+input:focus:-ms-input-placeholder {
+  color: var(--orange);
+}
+
+input:focus::-ms-input-placeholder {
+  color: var(--orange);
+}
+
+input:focus::placeholder {
+  color: var(--orange);
+}
+
+button {
+  font-family: Bangers, sans-serif;
+  letter-spacing: 2px;
+  font-size: 1.5rem;
+  text-shadow: 2px 4px 0 rgba(0, 0, 0, 0.2);
+  height: 10rem;
+  margin: auto;
+  cursor: pointer;
+
+  border: none;
+  background: url("/images/submit_bg.png") no-repeat center center;
+  background-size: contain;
+  text-align: center;
+  color: #fff;
+
+  transform: rotate(-8deg);
+  transition: 0.6s;
+}
+button:hover,
+button:focus {
+  transform: scale(1.5);
+}
+
+/* 480px+ */
+@media (min-width: 30em) {
+  form {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem 2rem;
+  }
+  button {
+    grid-column: 1 / span 2;}
+}
+
+footer {
+  position: relative;
+  background: var(--jaune);
+  padding: 2rem;
+  color: black;
+  border-top: 7px solid rgba(0, 0, 0, 0.09);
+  border-bottom: 7px solid rgba(0, 0, 0, 0.09);
+  line-height: 2rem;
+  padding-bottom: 0;
+}
+
+footer img {
+  position: absolute;
+  top: -4rem;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 9rem;
+}
+
+footer h2 {
+  font-size: 3rem;
+  text-align: center;
+  grid-column: 1 / span 2;
+}
+
+footer h3 {
+  text-align: center;
+  grid-column: 1 / span 2;
+}
+
+.final {
+  margin: auto;
+  max-width: 60rem;
+  width: calc(100% - 3rem);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+p {
+  text-align: left;
+}
+
+p:nth-of-type(2n + 1) {
+  text-align: right;
+}
+
+.grid-container {
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+}
+
+
+@media (max-width: 640px) {
+    body {
+        width: auto;
+        margin: 0;
+        padding: 0;}
+}
+
+img,
+table,
+td,
+th,
+input{
+  max-width: 100%;
+  }
+
+img {
+        height: auto;
+}
