@@ -1,6 +1,6 @@
 # Projet Triple Dare
 
-Challenge HTML / CSS
+HTML / CSS
 
 ## Couleur
 
